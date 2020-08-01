@@ -82,8 +82,8 @@ class MainTest {
             testReporter.publishEntry("Checking Main class static OrderItemList is at the same state as DB static OrderItemList...\n");
             List<OrderItem> orderItemListExpected = PopulateHelper.getOrderItemList();
             List<OrderItem> orderItemListActual = Main.orderItemList;
-            orderItemListActual = new ArrayList<>(Main.orderItemList); //uncomment to fail the test
-            orderItemListActual.remove(0); //uncomment to fail the test
+//            orderItemListActual = new ArrayList<>(Main.orderItemList); //uncomment to fail the test
+//            orderItemListActual.remove(0); //uncomment to fail the test
             assertIterableEquals(orderItemListExpected, orderItemListActual, "After DB is populated, the DB static OrderItemList should be exactly the same (same number, position and equality of List items) as the Main static OrderItemList ! No inconsistencies allowed !");
             testReporter.publishEntry("Checked !\n");
         }
